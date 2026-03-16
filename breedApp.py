@@ -17,11 +17,11 @@ st.write("Upload an image of your pet to identify its breed.")
 @st.cache_resource
 def load_breed_model():
     from keras.models import load_model
-    model = load_model("pet_breed_model1.h5", compile=False, safe_mode=False)
+    model = load_model("pet_breed_model.keras", compile=False, safe_mode=False)
     return model
 
 breed_model = load_breed_model()
-class_names = np.load("class_names1.npy", allow_pickle=True)
+class_names = np.load("class_names.npy", allow_pickle=True)
 
 # ------------------------
 # Image Upload
